@@ -21,6 +21,7 @@ def question_1(list1, list2):
     
     return diff
 
+
 def question_2(list1, list2):
 
     right_freq = {}
