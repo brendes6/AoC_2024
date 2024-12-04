@@ -1,5 +1,5 @@
 
-def helper(vals):
+def is_safe(vals):
     # Checks all rules
     # Check if list is ascending/descending and also if values differ between values 1-3
     return (all(vals[i]<vals[i+1] for i in range(len(vals)-1)) or all(vals[i]>vals[i+1] for i in range(len(vals)-1))) and all(0 < abs(vals[i]-vals[i+1]) < 4 for i in range(len(vals)-1))
@@ -13,7 +13,7 @@ def question_1_2(filename, skip_allowed):
             vals = [int(i) for i in line.split()]
 
             #check if vals passes rule set
-            if helper(vals):
+            if is_safe(vals):
                 count += 1
             
             # If vals doesnt pass, and skip is allowed, then:
@@ -21,7 +21,7 @@ def question_1_2(filename, skip_allowed):
                 
                 # for each possible removal in vals, check if removing it passes the rule set, if so increment count and break
                 for i in range(len(vals)):
-                    if helper([v for j, v in enumerate(vals) if j!=i]):
+                    if is_safe([v for j, v in enumerate(vals) if j!=i]):
                         count += 1
                         break
     
