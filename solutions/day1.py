@@ -33,9 +33,8 @@ def question_2(list1, list2):
             right_freq[val] = 1
     
     similarity_score = 0
-    for num in list1:
-        if num in right_freq:
-            similarity_score += right_freq[num] * num
+    for k, v in right_freq.items():
+        similarity_score += k * v
     
     return similarity_score
 
