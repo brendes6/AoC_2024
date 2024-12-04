@@ -5,7 +5,7 @@ def is_safe(vals):
     return (all(vals[i]<vals[i+1] for i in range(len(vals)-1)) or all(vals[i]>vals[i+1] for i in range(len(vals)-1))) and all(0 < abs(vals[i]-vals[i+1]) < 4 for i in range(len(vals)-1))
 
 
-def question_1_2(filename, skip_allowed):
+def get_solution(filename, skip_allowed):
     count = 0
 
     with open(filename, "r") as f:
@@ -28,5 +28,5 @@ def question_1_2(filename, skip_allowed):
     return count
 
 if __name__ == "__main__":
-    print("Part one solution: ", question_1_2("input_day2.txt", False))
-    print("Part one solution: ", question_1_2("input_day2.txt", True))
+    print("Part one solution: ", get_solution("input_day2.txt", False))
+    print("Part one solution: ", get_solution("input_day2.txt", True))
