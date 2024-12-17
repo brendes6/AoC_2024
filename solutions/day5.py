@@ -58,7 +58,7 @@ def solutions(parsed_input):
         while line_works and i<len(update):
 
             for j in range(0, i+1):
-                if update[j] in rules[update[i]]:
+                if (update[i] in rules) and update[j] in rules[update[i]]:
                     line_works = False
             
             i += 1
