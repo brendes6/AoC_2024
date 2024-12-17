@@ -1,6 +1,6 @@
 from utilities import input_reader
 
-xmas = "XMAS"
+XMAS_STR = "XMAS"
 count2 = 0
 
 # DIRECTIONS:
@@ -8,7 +8,7 @@ count2 = 0
 # 4 * 5
 # 6 7 8
 
-def get_next_index(x, y, direction):
+def get_next_index(x: int, y: int, direction: int) -> tuple[int, int]:
 
     # Based on direction, modify and return x and y
 
@@ -25,7 +25,7 @@ def get_next_index(x, y, direction):
     return x, y
 
 
-def search(grid, x, y, word, direction):
+def search(grid: list[str], x: int, y: int, word: str, direction: int) -> int:
 
     # Essentially DFS, but instead of recursively calling for all neighbors,
     # only call for the index in the 
@@ -35,15 +35,15 @@ def search(grid, x, y, word, direction):
 
     word += grid[x][y]
 
-    if word != xmas[:len(word)]:
+    if word != XMAS_STR[:len(word)]:
         return 0
-    if word == xmas:
+    if word == XMAS_STR:
         return 1
     
     i, j = get_next_index(x, y, direction)
     return search(grid, i, j, word, direction)
 
-def solution_one(grid):
+def solution_one(grid: list[str]) -> int:
 
     # Iterate through each starting letter in the grid, and begin a search there
     # 8 possible directions to search in
@@ -57,7 +57,7 @@ def solution_one(grid):
     
     return count
 
-def solution_two(grid):
+def solution_two(grid: list[str]) -> int:
 
     # Check for A's with properly oriented M's and S's to form an X-MAS
 
