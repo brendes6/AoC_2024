@@ -1,4 +1,3 @@
-
 from utilities import input_reader
 
 xmas = "XMAS"
