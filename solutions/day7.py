@@ -42,7 +42,7 @@ def generate_perms(size: int, ops_list: list, cats: bool, ops=[]) -> None:
     generate_perms(size, ops_list, cats, copy2)
 
 
-def solution_one(left_nums: list, right_nums: list, cats_allowed: bool) -> int:
+def solution(left_nums: list, right_nums: list, cats_allowed: bool) -> int:
 
     sum_calculations = 0
 
