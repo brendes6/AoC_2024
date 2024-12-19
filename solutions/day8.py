@@ -55,7 +55,6 @@ def solution_one(grid: list, harmonics: bool) -> int:
                 else:
                     add_antinode(val_list[a], val_list[b], grid)
 
-    
     num_antinodes = 0
     for row in grid:
         num_antinodes += sum(1 if c=="#" else 0 for c in row)
