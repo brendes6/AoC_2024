@@ -53,7 +53,7 @@ def solution_one(grid: list, harmonics: bool) -> int:
                 if harmonics:
                     add_antinode_harmonics(val_list[a], val_list[b], grid)
                 else:
-                    add_antidote(val_list[a], val_list[b], grid)
+                    add_antinode(val_list[a], val_list[b], grid)
 
     
     num_antinodes = 0
