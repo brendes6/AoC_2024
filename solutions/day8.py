@@ -27,7 +27,7 @@ def add_antinode_harmonics(pos1: tuple, pos2: tuple, grid: list) -> None:
             in_bounds_2 = False
     
 
-def add_antidote(pos1: tuple, pos2: tuple, grid: list) -> None:
+def add_antinode(pos1: tuple, pos2: tuple, grid: list) -> None:
     if (0 <= pos1[0] + pos1[0]-pos2[0] < len(grid)) and (0 <= pos1[1] + pos1[1]-pos2[1] < len(grid[0])):
         grid[pos1[0] + pos1[0]-pos2[0]][pos1[1] + pos1[1]-pos2[1]] = "#"
     if (0 <= pos2[0] + pos2[0]-pos1[0] < len(grid)) and (0 <= pos2[1] + pos2[1]-pos1[1] < len(grid[0])):
