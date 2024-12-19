@@ -63,7 +63,6 @@ def solution_one(grid: list, harmonics: bool) -> int:
     return num_antinodes
 
 
-
 if __name__ == "__main__":
     data = input_reader(8)
 
